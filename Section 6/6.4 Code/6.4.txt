@@ -1,0 +1,18 @@
+#Open the visual studio code editor directly in Azure CLI
+code
+
+#Paste the text in azure-vote.yaml in code and save it as azure-vote.yaml
+
+#Apply the deployment to the kubernetes cluster
+kubectl apply -f azure-vote.yaml
+
+#Get some info about the environment
+kubectl get pod
+kubectl get deployment
+kubectl get service
+
+#Clean up
+kubectl delete deployment azure-vote-back
+kubectl delete service azure-vote-back
+kubectl delete deployment azure-vote-front
+kubectl delete service azure-vote-front

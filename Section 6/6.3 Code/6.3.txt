@@ -1,0 +1,11 @@
+#After creating the cluster bring the Kubernetes credentials in the current CLI session
+az aks get-credentials --resource-group AKS-Test --name TestClus
+
+#You can access the Kubernetes Dashboard for your cluster on demand
+az aks browse --resource-group AKS-Test --name TestClus
+
+#Classic Kubernetes commands work in the Azure CLI now
+kubectl get node
+kubectl get pod
+kubectl get deployment
+kubectl get service

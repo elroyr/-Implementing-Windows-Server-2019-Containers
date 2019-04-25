@@ -1,0 +1,9 @@
+FROM mcr.microsoft.com/windows/servercore:ltsc2019
+
+RUN powershell -Command Install-WindowsFeature Web-Server
+
+COPY iisstart.htm C:/inetpub/wwwroot
+
+EXPOSE 80
+
+CMD ["ping", "-t", "localhost"]
